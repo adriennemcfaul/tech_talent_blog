@@ -15,12 +15,20 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.author %></td>
-        <td><%= post.blog_entry %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <div class="panel panel-default">
+          <div class="panel-heading">
+          <%= post.title %> - <%= post.author %>
+          </div>
+          <div class="panel-body">
+          <%= post.blog_entry %>
+          </div>
+          </div>
+            
+          </td>
+        <td><div class="btn btn-primary"><%= link_to 'Show', post %></div></td>
+        <td><div class="btn btn-info"><%= link_to 'Edit', edit_post_path(post) %></div></td>
+        <td><div class="btn btn-danger"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div></td>
       </tr>
     <% end %>
   </tbody>
