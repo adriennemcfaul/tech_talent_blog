@@ -7,7 +7,18 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
+  #<%= @post.author %>
+
+    <!-- instead of @post.author -->
+    by <%= @post.user.email %>
+
+
+
+</p>
+
+<p>
+    <!-- instead of @post.author -->
+    by <%= @post.user.username %>
 </p>
 
 <p>

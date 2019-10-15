@@ -19,6 +19,12 @@
           <div class="panel panel-default">
           <div class="panel-heading">
           <%= post.title %> - <%= post.author %>
+
+          <!-- instead of post.author -->
+<p>by <%= post.user.username %></p>
+<!-- instead of post.author -->
+<p>by <%= post.user.email %></p>
+
           </div>
           <div class="panel-body">
           <%= post.blog_entry %>
