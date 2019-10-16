@@ -18,13 +18,10 @@
         <td>
           <div class="panel panel-default">
           <div class="panel-heading">
-          <%= post.title %> - <%= post.author %>
-
-          <!-- instead of post.author -->
-<p>by <%= post.user.username %></p>
-<!-- instead of post.author -->
-<p>by <%= post.user.email %></p>
-
+          <div><%= post.title %><em><%= link_to post.user.username, user_posts_path(id: post.user_id)%>
+          </em></div>     
+<div><%= post.user.email %></div>
+<div> - <%= post.user.username %></div>
           </div>
           <div class="panel-body">
           <%= post.blog_entry %>
